@@ -8,11 +8,47 @@
   transform: translateY(-50%);
 }
 
+
+.titulo {
+  font-size: 40px;
+  font-family: 'consolas';
+  color: #4800ff;
+  margin-bottom: 10px;
+  font-weight: bold;
+}
+
+.subtitulo {
+  font-size: 30px;
+  font-family: 'consolas';
+  color: #4800ff;
+  margin-bottom: 10px;
+  font-weight: bold;
+}
+
+.custom-button {
+  margin-top: 10px;
+  margin-bottom: 50px;  
+}
+
+.custom-button-right {
+  margin-right: 20px;
+}
+
+.custom-input {
+  font-size: 20px;
+  color:#4800ff;
+}
+
+
+
+
+
 #container strong {
   font-size: 20px;
   line-height: 26px;
 }
 
+/*
 #container p {
   font-size: 16px;
   line-height: 22px;
@@ -21,7 +57,42 @@
 
   margin: 0;
 }
+  */
 
 #container a {
   text-decoration: none;
+}
+
+.animate-input {
+  animation: slide-right 1s ease forwards;
+}
+
+@keyframes slide-right {
+  0% {
+    transform: translateX(-10px);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+.calendar-icon {
+  width: 50px;
+  height: 50px; 
+  
+}
+
+img.logo {
+  width: 200px;
+  height: auto;
+  animation: trasladarLogoIn 5s alternate;
+}
+
+@keyframes trasladarLogoIn {
+  0% {
+    transform: translateX(-150px);
+  }
+  100% {
+    transform: translateX(0);
+  }
 }

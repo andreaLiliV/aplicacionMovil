@@ -40,6 +40,9 @@ export class LoginPage implements OnInit {
     }
     else{
       console.log("Usuario o contraseña no válidos");
+      this.usuario = "";
+      this.contra= "";
+
     }
 
   } // fin inicio de sesión

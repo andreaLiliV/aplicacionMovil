@@ -1,11 +1,3 @@
-<!--
-<ion-header [translucent]="true">
-  <ion-toolbar>
-    <ion-title>login</ion-title>
-  </ion-toolbar>
-</ion-header>  
--->
-
 <ion-content [fullscreen]="true">
 
   <div class="login-container center-content">
@@ -18,7 +10,7 @@
   
       </ion-card-header>
 
-      <ion-card-content>
+      <ion-card-content>        
 
         <ion-item>
           <ion-label class="custom-label" position="stacked">Usuario</ion-label> 
@@ -26,7 +18,7 @@
         </ion-item>
         
         <ion-item *ngIf="usuarioInvalido" color="danger">
-          <ion-label class="custom-label" position="stacked">El usuario debe ser alfanumérico, mínimo 3 caracteres y máximo 8</ion-label> 
+          <ion-label class="error_message" position="stacked">El usuario debe ser alfanumérico, mínimo 3 caracteres y máximo 8</ion-label> 
         </ion-item>
 
         <ion-item>
@@ -35,7 +27,7 @@
         </ion-item>
 
         <ion-item *ngIf="passwordInvalido" color="danger">
-          <ion-label class="custom-label" position="stacked">La contraseña debe numérica maximo 4 dígitos</ion-label> 
+          <ion-label class="error_message" position="stacked">La contraseña debe numérica maximo 4 dígitos</ion-label> 
         </ion-item>
 
          
