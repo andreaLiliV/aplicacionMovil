@@ -1,20 +1,73 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
     <ion-title>
-      Blank
+      TecnoFábulas
     </ion-title>
   </ion-toolbar>
 </ion-header>
 
+
+
 <ion-content [fullscreen]="true">
+  <!--
   <ion-header collapse="condense">
     <ion-toolbar>
       <ion-title size="large">Blank</ion-title>
     </ion-toolbar>
   </ion-header>
+-->
 
   <div id="container">
-    <strong>Ready to create an app?</strong>
-    <p>Start with Ionic <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components">UI Components</a></p>
+    <h1>Bienvenido!</h1>
+    <p>Usuario: {{usuarioRecibido}}</p>
+    <h2>Información adicional</h2>
+
+    <!--CARD-->
+    <ion-card color="secondary">
+      <ion-card-header>
+        <ion-card-title>Card Title</ion-card-title>
+        <ion-card-subtitle>Card Subtitle</ion-card-subtitle>
+      </ion-card-header>
+    
+      <ion-card-content>
+
+        <ion-item>
+          <ion-label position="stacked">Nombre</ion-label> 
+          <ion-input type="text"></ion-input> 
+        </ion-item>
+        
+        <ion-item>
+          <ion-label position="stacked">Apellido</ion-label> 
+          <ion-input type="text"></ion-input> 
+        </ion-item>
+
+        <ion-list>
+          <ion-item>
+            <ion-select
+              class="always-flip"
+              toggleIcon="caret-down-sharp"
+              interface="popover"
+              label="Nivel de eduación"
+              placeholder="Seleccione nivel"
+            >
+              <ion-select-option value="bananas">Enseñanza básica</ion-select-option>
+              <ion-select-option value="media">Enseñanza media</ion-select-option>
+              <ion-select-option value="superior">Técnica/universitaria</ion-select-option>
+            </ion-select>
+          </ion-item>
+          </ion-list>
+
+
+
+      </ion-card-content>
+    </ion-card>
+    <!--CARD-->
+
   </div>
 </ion-content>
+
+<ion-footer>
+  <ion-toolbar>
+    <ion-title>App desarrollada por Andrea Vilches N.</ion-title>
+  </ion-toolbar>
+</ion-footer>

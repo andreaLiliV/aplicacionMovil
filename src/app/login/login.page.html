@@ -21,17 +21,25 @@
       <ion-card-content>
 
         <ion-item>
-          <ion-label class="custom-label" position="stacked">Correo electrónico</ion-label> 
-          <ion-input class="border-input" type="email"></ion-input> 
+          <ion-label class="custom-label" position="stacked">Usuario</ion-label> 
+          <ion-input class="border-input" type="text" class="color-input" [(ngModel)]="usuario"></ion-input> 
+        </ion-item>
+        
+        <ion-item *ngIf="usuarioInvalido" color="danger">
+          <ion-label class="custom-label" position="stacked">El usuario debe ser alfanumérico, mínimo 3 caracteres y máximo 8</ion-label> 
         </ion-item>
 
         <ion-item>
           <ion-label class="custom-label" position="stacked">Contraseña</ion-label> 
-          <ion-input class="border-input" type="password"></ion-input>
+          <ion-input class="border-input" type="password" class="color-input" [(ngModel)]="contra"></ion-input>
+        </ion-item>
+
+        <ion-item *ngIf="passwordInvalido" color="danger">
+          <ion-label class="custom-label" position="stacked">La contraseña debe numérica maximo 4 dígitos</ion-label> 
         </ion-item>
 
          
-        <ion-button expand="block" fill="solid" shape="round" class="custom-button-top custom-button-bottom">Iniciar sesión</ion-button>
+        <ion-button (click)="iniciarSesion()" expand="block" fill="solid" shape="round" class="custom-button-top custom-button-bottom">Iniciar sesión</ion-button>
         <ion-button expand="block" fill="outline" shape="round" class="custom-button-bottom">Registrarse</ion-button>
 
         <ion-text class="text-center">
